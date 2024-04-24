@@ -1,0 +1,11 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+@font-face{
+    font-family: 'Nunito-Bold';
+    src: url('font/Nunito-Bold.ttf');
+    line-height: 120%;
+}
