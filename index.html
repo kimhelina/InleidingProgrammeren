@@ -6,29 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inleiding Programmeren</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <h1>Make a hero to fight against the boss</h1>
 
-    <section id="choices">
-      <div class="choices">
-        <h2>Color</h2>
-        <div class="item-layout">
-          <img src="img/customize/green-ellipse.png" />
-          <img src="img/customize/yellow-ellipse.png" />
-          <img src="img/customize/blue-ellipse.png" />
+    <section id="customize">
+      <section id="choices">
+        <div class="choices">
+          <h2>Color</h2>
+          <div class="item-layout">
+            <img
+              src="img/customize/green-ellipse.png"
+              alt="green ellipse button to make character green"
+              onclick="changeEllipseColor('green')"
+            />
+            <img
+              src="img/customize/yellow-ellipse.png"
+              alt="yellow ellipse button to make character yellow"
+              onclick="changeEllipseColor('yellow')"
+            />
+            <img
+              src="img/customize/blue-ellipse.png"
+              alt="blue ellipse button to make character blue"
+              onclick="changeEllipseColor('blue')"
+            />
+          </div>
         </div>
-      </div>
 
-      <div class="choices">
-        <h2>Face</h2>
-        <div class="item-layout">
-          <img src="img/customize/happy.png" />
-          <img src="img/customize/angry.png" />
-          <img src="img/customize/sad.png" />
+        <div class="choices">
+          <h2>Face</h2>
+          <div class="item-layout">
+            <img
+              src="img/customize/happy.png"
+              alt="happy face button for face of the character"
+              onclick="overlayFace('happy')"
+            />
+            <img
+              src="img/customize/angry.png"
+              alt="angry face button for face of the character"
+              onclick="overlayFace('angry')"
+            />
+            <img
+              src="img/customize/sad.png"
+              alt="sad face button for face of the character"
+              onclick="overlayFace('sad')"
+            />
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section id="character">
+        <div id="ellipse"></div>
+        <div class="textbox-container">
+          <input
+            type="text"
+            id="hero-input"
+            placeholder="What is the name of the hero?"
+            readonly
+          />
+          <button onclick="promptName()">Enter Hero Name</button>
+        </div>
+        <div id="display-area"></div>
+        <script src="script.js"></script>
+      </section>
     </section>
+
+    <h3>START</h3>
   </body>
 </html>
