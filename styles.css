@@ -1,15 +1,54 @@
-*{
-    padding: 0;
-    margin: 0;
-    border: 0;
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
-@font-face{
-    font-family: 'Nunito-Bold';
-    src: url('font/Nunito-Bold.ttf');
-    line-height: 120%;
+@font-face {
+  font-family: "Nunito-Bold";
+  src: url("font/Nunito-Bold.ttf");
+  line-height: 120%;
+}
+@font-face {
+  font-family: "Lato-Regular";
+  src: url("font/Lato-Regular.ttf");
+  line-height: 120%;
 }
 
-body{
-    
+body {
+  background-image: url(img/start-background.png);
+  background-size: cover;
+}
+
+body h1 {
+  font-family: "Nunito-Bold";
+  font-size: 3em;
+  text-align: center;
+}
+body h2 {
+  font-family: "Lato-Regular";
+  font-size: 2.25em;
+}
+
+.item-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 3em; /* 40px */
+}
+.choices {
+  display: flex;
+  padding: 2em 2.25em; /* 32px 36px */
+  width: 25.625em; /* 410px */
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em; /* 24px */
+
+  border-radius: 1.875em; /* 30px */
+  background: #fff;
+}
+#choices {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5em; /* 40px */
 }
