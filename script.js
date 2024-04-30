@@ -7,7 +7,7 @@ function promptName() {
   }
 }
 
-//change character color
+// Change character color
 function changeEllipseColor(color) {
   const ellipse = document.getElementById("ellipse");
   switch (color) {
@@ -23,25 +23,25 @@ function changeEllipseColor(color) {
     default:
       console.error("Invalid color");
   }
+}
 
-  //change character face
-  function overlayFace(face) {
-    const character = document.getElementById("character");
-    switch (face) {
-      case "happy":
-        character.innerHTML +=
-          '<img src="img/customize/happy.png" alt="happy face overlay" class="overlay-img" />';
-        break;
-      case "angry":
-        character.innerHTML +=
-          '<img src="img/customize/angry.png" alt="angry face overlay" class="overlay-img" />';
-        break;
-      case "sad":
-        character.innerHTML +=
-          '<img src="img/customize/sad.png" alt="sad face overlay" class="overlay-img" />';
-        break;
-      default:
-        console.error("Invalid face");
-    }
+// Overlay character face
+function overlayFace(face) {
+  const character = document.getElementById("character");
+  switch (face) {
+    case "happy":
+      character.innerHTML +=
+        '<img src="img/customize/happy.png" alt="happy face overlay" class="overlay-img" />';
+      break;
+    case "angry":
+      character.innerHTML +=
+        '<img src="img/customize/angry.png" alt="angry face overlay" class="overlay-img" />';
+      break;
+    case "sad":
+      character.innerHTML +=
+        '<img src="img/customize/sad.png" alt="sad face overlay" class="overlay-img" />';
+      break;
+    default:
+      console.error("Invalid face");
   }
 }

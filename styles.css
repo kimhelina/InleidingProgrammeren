@@ -90,9 +90,9 @@ body h3 {
 }
 .overlay-img {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 35%;
+  left: 68%;
+  transform: scale(1.5);
   z-index: 1; /* Ensure overlay appears above the ellipse */
 }
 
