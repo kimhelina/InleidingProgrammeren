@@ -25,6 +25,8 @@ body {
   flex-direction: column;
   justify-content: center; /* Align items horizontally in the center */
   align-items: center;
+
+  gap: 2.5em;
 }
 
 body h1 {
@@ -34,6 +36,10 @@ body h1 {
 body h2 {
   font-family: "Lato-Regular";
   font-size: 2.25em;
+}
+body h3 {
+  font-family: "Lato-Regular";
+  font-size: 1.5em;
 }
 
 #customize {
@@ -56,7 +62,7 @@ body h2 {
   gap: 1.5em; /* 24px */
 
   border-radius: 1.875em; /* 30px */
-  background: #fff;
+  background: white;
 }
 #choices {
   display: inline-flex;
@@ -67,11 +73,13 @@ body h2 {
 
 /*character*/
 #character {
-  background-image: url(img/customize/rectangle.png);
-  /* background-size: cover; */
+  background-color: white;
+  padding: 2em;
+  border-radius: 10%;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
+  gap: 1em;
 }
 #ellipse {
   width: 21.25em;
@@ -89,36 +97,37 @@ body h2 {
 }
 
 /*textbox*/
-.textbox-container {
+#textbox-container {
   margin-bottom: 1.25em;
   display: flex; /* Use flexbox layout */
   align-items: center; /* Align items vertically */
   flex-direction: column;
-  gap: 2em;
+  gap: 1em;
 }
 
 input[type="text"] {
-  padding: 0.8em;
-  border: 2px solid #fdd179;
-  border-radius: 5px;
-  width: 12.5;
+  padding: 1em;
+  border: 0.2em solid #fdd179;
+  border-radius: 5em;
+  width: 15em;
   background-color: white;
+
+  font-family: "Lato-Regular";
+  font-size: 1em;
 }
 
 button {
-  padding: 10px 20px;
-  background-color: #007bff;
+  padding: 1em;
+  background-color: #3d8368;
   color: white;
-  border: none;
-  border-radius: 5px;
+  border-radius: 5em;
+  width: 20em;
   cursor: pointer;
+
+  font-family: "Lato-Regular";
+  font-size: 1em;
 }
 
 button:hover {
-  background-color: #0056b3;
-}
-
-#display-area {
-  margin-top: 20px;
-  font-size: 18px;
+  background-color: #75bda1;
 }
