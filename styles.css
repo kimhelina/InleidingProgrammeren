@@ -54,10 +54,20 @@ li {
   gap: 3em; /* 40px */
 }
 
+/* 필요한가? */
+img:hover {
+  border-style: dotted;
+  border-width: 0.3em;
+  border-radius: 40em;
+  border-color: bisque;
+  padding: 0.5em;
+}
+
 .choices {
   display: flex;
   padding: 2em 2.25em; /* 32px 36px */
   width: 25.625em; /* 410px */
+  height: 10em;
   flex-direction: column;
   align-items: center;
   gap: 1.5em; /* 24px */

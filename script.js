@@ -1,3 +1,7 @@
+const greenColor = "#7FB275";
+const yellowColor = "#FDD179";
+const blueColor = "#8CABD7";
+
 //for name button
 function promptName() {
   var heroName = prompt("What is the name of the hero?");
@@ -12,13 +16,13 @@ function changeEllipseColor(color) {
   const ellipse = document.getElementById("ellipse");
   switch (color) {
     case "green":
-      ellipse.style.backgroundColor = "#7FB275";
+      ellipse.style.backgroundColor = greenColor;
       break;
     case "yellow":
-      ellipse.style.backgroundColor = "#FDD179";
+      ellipse.style.backgroundColor = yellowColor;
       break;
     case "blue":
-      ellipse.style.backgroundColor = "#8CABD7";
+      ellipse.style.backgroundColor = blueColor;
       break;
     default:
       console.error("Invalid color");
