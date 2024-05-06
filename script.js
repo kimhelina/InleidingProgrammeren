@@ -31,19 +31,25 @@ function changeEllipseColor(color) {
 
 // Overlay character face
 function overlayFace(face) {
-  const character = document.getElementById("character");
+  const happyFace = document.getElementById("happy");
+  const angryFace = document.getElementById("angry");
+  const sadFace = document.getElementById("sad");
+
   switch (face) {
     case "happy":
-      character.innerHTML +=
-        '<img src="img/customize/happy.png" alt="happy face overlay" class="overlay-img" />';
+      happyFace.style.display = "inline";
+      angryFace.style.display = "none";
+      sadFace.style.display = "none";
       break;
     case "angry":
-      character.innerHTML +=
-        '<img src="img/customize/angry.png" alt="angry face overlay" class="overlay-img" />';
+      happyFace.style.display = "none";
+      angryFace.style.display = "inline";
+      sadFace.style.display = "none";
       break;
     case "sad":
-      character.innerHTML +=
-        '<img src="img/customize/sad.png" alt="sad face overlay" class="overlay-img" />';
+      happyFace.style.display = "none";
+      angryFace.style.display = "none";
+      sadFace.style.display = "inline";
       break;
     default:
       console.error("Invalid face");

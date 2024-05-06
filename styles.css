@@ -41,6 +41,10 @@ body h3 {
   font-family: "Lato-Regular";
   font-size: 1.5em;
 }
+body p {
+  font-family: "Lato-Regular";
+  font-size: 1em;
+}
 
 #customize {
   display: inline-flex;
@@ -48,21 +52,23 @@ body h3 {
   gap: 12.5em;
 }
 
+/* 얘네 리스트 어떻게 고쳐야함 */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 li {
+  float: left;
+  padding: 0.8em;
+}
+li a {
   display: flex;
   align-items: flex-start;
-  gap: 3em; /* 40px */
 }
 
-/* 필요한가? */
-img:hover {
-  border-style: dotted;
-  border-width: 0.3em;
-  border-radius: 40em;
-  border-color: bisque;
-  padding: 0.5em;
-}
-
+/* inside of the choices */
 .choices {
   display: flex;
   padding: 2em 2.25em; /* 32px 36px */
@@ -70,16 +76,17 @@ img:hover {
   height: 10em;
   flex-direction: column;
   align-items: center;
-  gap: 1.5em; /* 24px */
+  gap: 1em;
 
   border-radius: 1.875em; /* 30px */
   background: white;
 }
+/* two choices */
 #choices {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 2.5em; /* 40px */
+  gap: 2em; /* 40px */
 }
 
 /*character*/
@@ -92,6 +99,9 @@ img:hover {
   align-items: center;
   gap: 1em;
 }
+#character img {
+  display: none;
+}
 #ellipse {
   width: 21.25em;
   height: 21.25em;
@@ -102,7 +112,7 @@ img:hover {
 .overlay-img {
   position: absolute;
   top: 35%;
-  left: 67%;
+  left: center;
   transform: scale(1.5);
   z-index: 1; /* Ensure overlay appears above the ellipse */
 }
@@ -141,4 +151,54 @@ button {
 
 button:hover {
   background-color: #75bda1;
+}
+
+/* button to start fight */
+/* bron: https://dev.to/webdeasy/top-20-css-buttons-animations-f41 */
+.button-fight {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.button-fight:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f38888;
+  border-radius: 10rem;
+  z-index: -2;
+}
+
+.button-fight:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #ec7676;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+
+.button-fight:hover {
+  color: #fff;
+}
+
+.button-fight:hover:before {
+  width: 100%;
 }
