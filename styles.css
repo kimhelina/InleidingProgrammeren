@@ -205,9 +205,24 @@ button:hover {
 
 /* ------------------- FIGHT PAGE --------------------- */
 #fight-body {
+  min-height: 100%;
   background-image: url(img/fight/fight-background.png);
 }
-#press-enter-txt {
+.description {
+  display: none;
+}
+
+.description#description1 #description2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 2.25em 2em;
+  gap: 1.25em;
+  border-radius: 2.5em;
+  background: #fff;
+}
+
+.press-enter-txt {
   transform: translate(-50%, -50%);
   font-size: 0.8em;
   animation: animate 1.5s linear infinite;
@@ -222,4 +237,11 @@ button:hover {
   100% {
     opacity: 0;
   }
+}
+
+.weapon-button {
+  background-color: #2e2e2e;
+}
+.weapon-button:hover {
+  background-color: #828282;
 }
