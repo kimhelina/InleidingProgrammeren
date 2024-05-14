@@ -1,3 +1,6 @@
+localStorage.setItem("naam", "helina");
+console.log(localStorage.getItem("naam"));
+
 const greenColor = "#7FB275";
 const yellowColor = "#FDD179";
 const blueColor = "#8CABD7";
