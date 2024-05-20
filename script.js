@@ -35,17 +35,17 @@ document.getElementById("blue-ellipse").addEventListener("click", function () {
   changeEllipseColor("blue");
 });
 
-// Add event listeners for face buttons
-document.getElementById("face-happy").addEventListener("click", function () {
-  overlayFace("happy");
-});
-document.getElementById("face-angry").addEventListener("click", function () {
-  overlayFace("angry");
-});
-document.getElementById("face-sad").addEventListener("click", function () {
-  overlayFace("sad");
-});
-// addEventListener toevoegen van face + 클릭했을 때 src 만 바뀌도록
+// // Add event listeners for face buttons
+// document.getElementById("face-happy").addEventListener("click", function () {
+//   overlayFace("happy");
+// });
+// document.getElementById("face-angry").addEventListener("click", function () {
+//   overlayFace("angry");
+// });
+// document.getElementById("face-sad").addEventListener("click", function () {
+//   overlayFace("sad");
+// });
+// // addEventListener toevoegen van face + 클릭했을 때 src 만 바뀌도록
 // function changeFace(event) {
 //   const happyFace = document
 //     .getElementById("happy")
@@ -56,42 +56,28 @@ document.getElementById("face-sad").addEventListener("click", function () {
 //   happyFace;
 // }
 
-const faceOverlay = document.getElementById("face-overlay");
+// function aCallBack(e) {
+//   console.log(faceOverlay.src);
+//   //   faceOverlay.src = e.target.src;
+// }
 
-function aCallBack(e) {
-  console.log(faceOverlay.src);
-  //   faceOverlay.src = e.target.src;
+// const sadFace = document.getElementById("sad-face");
+// sadFace.addEventListener("click", aCallBack);
+
+// Function to change face image src
+function changeFaceImage(event) {
+  const faceOverlay = document.getElementById("face-overlay");
+  faceOverlay.src = event.target.src;
 }
 
-const sadFace = document.getElementById("sad-face");
-sadFace.addEventListener("click", aCallBack);
-
-// Overlay character face
-// function overlayFace(face) {
-//   const happyFace = document.getElementById("happy");
-//   const angryFace = document.getElementById("angry");
-//   const sadFace = document.getElementById("sad");
-
-//   switch (face) {
-//     case "happy":
-//       happyFace.style.display = "inline";
-//       angryFace.style.display = "none";
-//       sadFace.style.display = "none";
-//       break;
-//     case "angry":
-//       happyFace.style.display = "none";
-//       angryFace.style.display = "inline";
-//       sadFace.style.display = "none";
-//       break;
-//     case "sad":
-//       happyFace.style.display = "none";
-//       angryFace.style.display = "none";
-//       sadFace.style.display = "inline";
-//       break;
-//     default:
-//       console.error("Invalid face");
-//   }
-// }
+// Add event listeners for face buttons
+document
+  .getElementById("happy-face")
+  .addEventListener("click", changeFaceImage);
+document
+  .getElementById("angry-face")
+  .addEventListener("click", changeFaceImage);
+document.getElementById("sad-face").addEventListener("click", changeFaceImage);
 
 //for name button
 function promptName() {
@@ -101,3 +87,8 @@ function promptName() {
     heroInput.value = heroName;
   }
 }
+
+// Add event listener for the hero name button
+document
+  .getElementById("hero-name-button")
+  .addEventListener("click", promptName);
