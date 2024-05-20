@@ -34,10 +34,6 @@ body {
   width: 50vh;
   height: 50vh;
 }
-#secondH1,
-#thirdH1 {
-  display: none;
-}
 
 .description {
   display: flex;
@@ -48,10 +44,11 @@ body {
   border-radius: 2.5em;
   background: #fff;
 }
-#description2,
-#description3 {
-  display: none;
+p {
+  font-size: 1.2em;
+  font-family: "Lato-Regular";
 }
+
 #weapons {
   display: none;
 }
@@ -72,8 +69,21 @@ body {
   }
 }
 
+#weapons {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 2em;
+}
 .weapon-button {
-  background-color: #2e2e2e;
+  background-color: #4e4e4e;
+  color: white;
+  text-transform: capitalize;
+  font-size: 1.2em;
+  font-family: "Nunito-Bold";
+  display: flex;
+  padding: 1.2em 2em;
+  justify-content: center;
+  border-radius: 1.5em;
 }
 .weapon-button:hover {
   background-color: #828282;
