@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inleiding Programmeren</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
   </head>
   <body>
     <h1>Make a hero to fight against the boss</h1>
@@ -21,23 +20,23 @@
           <ul>
             <li>
               <img
+                id="green-ellipse"
                 src="img/customize/green-ellipse.png"
                 alt="green ellipse button to make character green"
-                onclick="changeEllipseColor('green')"
               />
             </li>
             <li>
               <img
+                id="yellow-ellipse"
                 src="img/customize/yellow-ellipse.png"
                 alt="yellow ellipse button to make character yellow"
-                onclick="changeEllipseColor('yellow')"
               />
             </li>
             <li>
               <img
+                id="blue-ellipse"
                 src="img/customize/blue-ellipse.png"
                 alt="blue ellipse button to make character blue"
-                onclick="changeEllipseColor('blue')"
               />
             </li>
           </ul>
@@ -51,21 +50,21 @@
               <img
                 src="img/customize/happy.png"
                 alt="happy face button for face of the character"
-                onclick="overlayFace('happy')"
+                id="happy-face"
               />
             </li>
             <li>
               <img
                 src="img/customize/angry.png"
                 alt="angry face button for face of the character"
-                onclick="overlayFace('angry')"
+                id="angry-face"
               />
             </li>
             <li>
               <img
                 src="img/customize/sad.png"
                 alt="sad face button for face of the character"
-                onclick="overlayFace('sad')"
+                id="sad-face"
               />
             </li>
           </ul>
@@ -79,19 +78,7 @@
         <img
           src="img/customize/happy.png"
           alt="happy face button for face of the character"
-          id="happy"
-          class="overlay-img"
-        />
-        <img
-          src="img/customize/angry.png"
-          alt="angry face button for face of the character"
-          id="angry"
-          class="overlay-img"
-        />
-        <img
-          src="img/customize/sad.png"
-          alt="sad face button for face of the character"
-          id="sad"
+          id="face-overlay"
           class="overlay-img"
         />
         <!-- the textbox with button -->
@@ -113,5 +100,7 @@
     <div class="container">
       <a href="fight.html" class="button-fight"><p>Let's Fight</p></a>
     </div>
+
+    <script src="script.js" defer></script>
   </body>
 </html>
