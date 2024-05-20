@@ -59,7 +59,7 @@ function advanceStage() {
       document.getElementById("description3").style.display = "block";
       break;
     case 6:
-      window.location.href = "clear.html";
+      window.location.href = "ending.html";
       break;
   }
 }
