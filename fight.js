@@ -15,13 +15,8 @@ function initializeGame() {
 }
 
 function handleKeydown(event) {
-  if (event.key === "Enter") {
-    if (stage % 2 === 0) {
-      showWeapons();
-    } else {
-      hideWeapons();
-      advanceStage();
-    }
+  if (event.key === "Enter" && stage % 2 === 0) {
+    advanceStage();
   }
 }
 
@@ -36,7 +31,6 @@ function showWeapons() {
     .querySelectorAll(".description")
     .forEach((desc) => (desc.style.display = "none"));
   document.getElementById("weapons").style.display = "flex";
-  stage++;
 }
 
 function hideWeapons() {
@@ -44,19 +38,27 @@ function hideWeapons() {
   document
     .querySelectorAll(".description")
     .forEach((desc) => (desc.style.display = "flex"));
-  stage++;
 }
 
 function advanceStage() {
   hideAllElements();
-  switch (stage) {
+  switch (++stage) {
+    case 1:
+      showWeapons();
+      break;
     case 2:
       document.getElementById("secondH1").style.display = "block";
       document.getElementById("description2").style.display = "block";
       break;
+    case 3:
+      showWeapons();
+      break;
     case 4:
       document.getElementById("thirdH1").style.display = "block";
       document.getElementById("description3").style.display = "block";
+      break;
+    case 5:
+      showWeapons();
       break;
     case 6:
       window.location.href = "ending.html";
