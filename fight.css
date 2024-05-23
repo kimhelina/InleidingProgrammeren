@@ -30,6 +30,17 @@ body {
 
   gap: 2.5em;
 }
+
+audio {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+h1 {
+  font-family: "Nunito-Bold";
+  font-size: 3em;
+}
+
 #villian {
   width: 50vh;
   height: 50vh;
