@@ -1,9 +1,15 @@
 let stage = 0;
 
 // Event listener for when the DOM content is fully loaded
+// The DOMContentLoaded event fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
 document.addEventListener("DOMContentLoaded", () => {
+  // Initialize the game by setting up the initial display state
   initializeGame();
+
+  // Add an event listener for keydown events on the window
   window.addEventListener("keydown", handleKeydown);
+
+  // Add click event listeners to all elements with the class "weapon-button"
   document.querySelectorAll(".weapon-button").forEach((button) => {
     button.addEventListener("click", handleWeaponClick);
   });
@@ -26,16 +32,16 @@ function handleKeydown(event) {
 // Handles the 'click' event on weapon buttons, checking the selected weapon against the correct order
 function handleWeaponClick(event) {
   if (stage % 2 !== 1) {
-    console.log("왜 안 된?");
-
     return;
   }
 
   // The correct order of weapons
   const rightOrder = [2, 3, 1];
+
   // stage van nu delen door 2 en afgerond van 0, 1, 2, 3, 4, 5 tot 0, 1, 2
   const stageNumber = Math.floor(stage / 2);
-  //rightWeapon 을 rigjtOrder 을 현재 스테이지 기준으로 뽑아옴
+
+  //rightWeapon 을 rightOrder 을 현재 스테이지 기준으로 뽑아옴
   const rightWeapon = rightOrder[stageNumber];
 
   // If the selected weapon is incorrect, redirect to the bad ending

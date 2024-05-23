@@ -39,8 +39,6 @@ document.getElementById("blue-ellipse").addEventListener("click", function () {
 function changeFaceImage(event) {
   const faceOverlay = document.getElementById("face-overlay");
   faceOverlay.src = event.target.src;
-
-  console.log(event.target.src);
 }
 
 // Add event listeners for face buttons
