@@ -35,39 +35,12 @@ document.getElementById("blue-ellipse").addEventListener("click", function () {
   changeEllipseColor("blue");
 });
 
-// // Add event listeners for face buttons
-// document.getElementById("face-happy").addEventListener("click", function () {
-//   overlayFace("happy");
-// });
-// document.getElementById("face-angry").addEventListener("click", function () {
-//   overlayFace("angry");
-// });
-// document.getElementById("face-sad").addEventListener("click", function () {
-//   overlayFace("sad");
-// });
-// // addEventListener toevoegen van face + 클릭했을 때 src 만 바뀌도록
-// function changeFace(event) {
-//   const happyFace = document
-//     .getElementById("happy")
-//     .addEventListener("click", event.target.src);
-//   const angryFace = document.getElementById("angry");
-//   const sadFace = document.getElementById("sad");
-
-//   happyFace;
-// }
-
-// function aCallBack(e) {
-//   console.log(faceOverlay.src);
-//   //   faceOverlay.src = e.target.src;
-// }
-
-// const sadFace = document.getElementById("sad-face");
-// sadFace.addEventListener("click", aCallBack);
-
 // Function to change face image src
 function changeFaceImage(event) {
   const faceOverlay = document.getElementById("face-overlay");
   faceOverlay.src = event.target.src;
+
+  console.log(event.target.src);
 }
 
 // Add event listeners for face buttons

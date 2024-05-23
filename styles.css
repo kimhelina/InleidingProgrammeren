@@ -99,10 +99,11 @@ li a {
   align-items: center;
   gap: 1em;
 }
-#character img {
-  display: none;
-}
+
 #ellipse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 21.25em;
   height: 21.25em;
   flex-shrink: 0;
@@ -110,10 +111,7 @@ li a {
   border: 0.5em solid #242424;
 }
 .overlay-img {
-  position: absolute;
-  top: 35%;
-  left: center;
-  transform: scale(1.5);
+  scale: 1.2;
   z-index: 1; /* Ensure overlay appears above the ellipse */
 }
 
