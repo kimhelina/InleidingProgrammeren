@@ -20,10 +20,25 @@ function handleKeydown(event) {
   }
 }
 
-function handleWeaponClick() {
-  if (stage % 2 === 1) {
-    advanceStage();
+function handleWeaponClick(event) {
+  if (stage % 2 !== 1) {
+    console.log("왜 안 된?");
+
+    return;
   }
+
+  //mijn volgorde van de wapens
+  const rightOrder = [2, 3, 1];
+  // stage van nu delen door 2 en afgerond van 0, 1, 2, 3, 4, 5 tot 0, 1, 2
+  const stageNumber = Math.floor(stage / 2);
+  //rightWeapon 을 rigjtOrder 을 현재 스테이지 기준으로 뽑아옴
+  const rightWeapon = rightOrder[stageNumber];
+
+  if (rightWeapon !== Number(event.target.value)) {
+    window.location.href = "bad-ending.html";
+    return;
+  }
+  advanceStage();
 }
 
 function showWeapons() {
@@ -42,6 +57,7 @@ function hideWeapons() {
 
 function advanceStage() {
   hideAllElements();
+  // ++ is een operator
   switch (++stage) {
     case 1:
       showWeapons();
