@@ -1,5 +1,6 @@
 let stage = 0;
 
+// Event listener for when the DOM content is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
   initializeGame();
   window.addEventListener("keydown", handleKeydown);
@@ -8,18 +9,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Initializes the game by hiding all elements and showing the first H1 and description
 function initializeGame() {
   hideAllElements();
   document.getElementById("firstH1").style.display = "block";
   document.getElementById("description1").style.display = "block";
 }
 
+// Handles the 'keydown' event, advancing the stage if the Enter key is pressed and stage is even
 function handleKeydown(event) {
   if (event.key === "Enter" && stage % 2 === 0) {
     advanceStage();
   }
 }
 
+// Handles the 'click' event on weapon buttons, checking the selected weapon against the correct order
 function handleWeaponClick(event) {
   if (stage % 2 !== 1) {
     console.log("왜 안 된?");
@@ -27,20 +31,23 @@ function handleWeaponClick(event) {
     return;
   }
 
-  //mijn volgorde van de wapens
+  // The correct order of weapons
   const rightOrder = [2, 3, 1];
   // stage van nu delen door 2 en afgerond van 0, 1, 2, 3, 4, 5 tot 0, 1, 2
   const stageNumber = Math.floor(stage / 2);
   //rightWeapon 을 rigjtOrder 을 현재 스테이지 기준으로 뽑아옴
   const rightWeapon = rightOrder[stageNumber];
 
+  // If the selected weapon is incorrect, redirect to the bad ending
   if (rightWeapon !== Number(event.target.value)) {
     window.location.href = "bad-ending.html";
     return;
   }
+  // Advance to the next stage if the weapon is correct
   advanceStage();
 }
 
+// Shows the weapons selection and hides all descriptions
 function showWeapons() {
   document
     .querySelectorAll(".description")
@@ -48,6 +55,7 @@ function showWeapons() {
   document.getElementById("weapons").style.display = "flex";
 }
 
+// Hides the weapons selection and shows all descriptions
 function hideWeapons() {
   document.getElementById("weapons").style.display = "none";
   document
@@ -55,9 +63,10 @@ function hideWeapons() {
     .forEach((desc) => (desc.style.display = "flex"));
 }
 
+// Advances the stage and updates the display based on the current stage
 function advanceStage() {
   hideAllElements();
-  // ++ is een operator
+  // Increment the stage
   switch (++stage) {
     case 1:
       showWeapons();
@@ -82,6 +91,7 @@ function advanceStage() {
   }
 }
 
+// Hides all H1 elements, all descriptions, and the weapons section
 function hideAllElements() {
   document.querySelectorAll("h1").forEach((h1) => (h1.style.display = "none"));
   document
