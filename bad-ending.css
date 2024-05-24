@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+@font-face {
+  font-family: "Nunito-Bold";
+  src: url("font/Nunito-Bold.ttf");
+  line-height: 120%;
+}
+@font-face {
+  font-family: "Lato-Regular";
+  src: url("font/Lato-Regular.ttf");
+  line-height: 120%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+
+  background-image: url(img/bad/bad-background.png);
+  background-size: cover;
+}
+body h1 {
+  font-family: "Nunito-Bold";
+  font-size: 3em;
+}
+body p {
+  font-family: "Lato-Regular";
+  font-size: 1.3em;
+}
+
+audio {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#villain-img {
+  display: flex;
+  align-items: center;
+}
+
+/* button to start fight */
+/* bron: https://dev.to/webdeasy/top-20-css-buttons-animations-f41 */
+.button-fight {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.button-fight:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #087a2e;
+  border-radius: 10rem;
+  z-index: -2;
+}
+
+.button-fight:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #3aa85f;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+
+.button-fight:hover {
+  color: #fff;
+}
+
+.button-fight:hover:before {
+  width: 100%;
+}

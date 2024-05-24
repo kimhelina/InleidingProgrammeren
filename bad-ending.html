@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Bad Ending</title>
+    <link rel="stylesheet" href="bad-ending.css" />
   </head>
   <body>
     <!-- bron: VLLO Era of factions -->
@@ -13,5 +14,17 @@
       controls="controls"
       autoplay="autoplay"
     ></audio>
+
+    <h1>You lose...</h1>
+    <p>You may select other weapon to clear the boss</p>
+    <img id="villain-img" src="img/bad/villain.png" alt="villain wins image" />
+
+    <!-- button to restart game  -->
+    <!-- bron: https://dev.to/webdeasy/top-20-css-buttons-animations-f41 -->
+    <div class="container">
+      <a href="fight.html" class="button-fight"><p>Restart</p></a>
+    </div>
+
+    <script src="script.js" defer></script>
   </body>
 </html>
