@@ -52,8 +52,8 @@ document.getElementById("sad-face").addEventListener("click", changeFaceImage);
 
 //for name button
 function promptName() {
-  var heroName = prompt("What is the name of the hero?");
-  var heroInput = document.getElementById("hero-input");
+  let heroName = prompt("What is the name of the hero?");
+  let heroInput = document.getElementById("hero-input");
   if (heroName !== null && heroName !== "") {
     heroInput.value = heroName;
   }

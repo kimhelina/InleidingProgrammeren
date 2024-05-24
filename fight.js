@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
 // Initializes the game by hiding all elements and showing the first H1 and description
 function initializeGame() {
   hideAllElements();
-  document.getElementById("firstH1").style.display = "block";
-  document.getElementById("description1").style.display = "block";
+  document.getElementById("firstH1").style.display = "flex";
+  document.getElementById("description1").style.display = "flex";
 }
 
 // Handles the 'keydown' event, advancing the stage if the Enter key is pressed and stage is even
@@ -78,15 +78,15 @@ function advanceStage() {
       showWeapons();
       break;
     case 2:
-      document.getElementById("secondH1").style.display = "block";
-      document.getElementById("description2").style.display = "block";
+      document.getElementById("secondH1").style.display = "flex";
+      document.getElementById("description2").style.display = "flex";
       break;
     case 3:
       showWeapons();
       break;
     case 4:
-      document.getElementById("thirdH1").style.display = "block";
-      document.getElementById("description3").style.display = "block";
+      document.getElementById("thirdH1").style.display = "flex";
+      document.getElementById("description3").style.display = "flex";
       break;
     case 5:
       showWeapons();
