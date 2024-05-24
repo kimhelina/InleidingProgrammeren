@@ -1,0 +1,8 @@
+button to start fight & restart (HTML/ CSS/ JS):
+bron: https://dev.to/webdeasy/top-20-css-buttons-animations-f41 
+
+BGM:
+index.html: VLLO Sunday of farm
+fight.html: VLLO Era of factions
+bad-ending.html:
+ending.html: https://pixabay.com/music/adventure-waterfall-140894/
