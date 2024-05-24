@@ -48,7 +48,6 @@ function changeFaceImage(event) {
   faceOverlay.src = event.target.src;
 }
 
-// alle faces img in een lijst (querySelectorAll) -> die lijst[] met foreach element.addEventListener
 // Add event listeners for face buttons
 document
   .getElementById("happy-face")
