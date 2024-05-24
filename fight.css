@@ -97,3 +97,7 @@ p {
 .weapon-button:hover {
   background-color: #828282;
 }
+
+.hidden {
+  display: none;
+}

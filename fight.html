@@ -13,14 +13,14 @@
     <audio src="bgm/fight.mp3" controls="controls" autoplay="autoplay"></audio>
 
     <!-- Headings for each stage -->
-    <h1 id="firstH1">1/3</h1>
-    <h1 id="secondH1">2/3</h1>
-    <h1 id="thirdH1">3/3</h1>
+    <h1 id="firstH1" class="hidden">1/3</h1>
+    <h1 id="secondH1" class="hidden">2/3</h1>
+    <h1 id="thirdH1" class="hidden">3/3</h1>
 
     <img id="villian" src="img/fight/villian.png" alt="villan image" />
 
     <!-- description after selecting a weapon -->
-    <section class="description" id="description1">
+    <section class="description hidden" id="description1">
       <p>
         "Finally, it's our chance to defeat the villain! Choose a skill that
         will enable us to vanquish the dark lord!"
@@ -28,23 +28,23 @@
       <p class="press-enter-txt">press on enter...</p>
     </section>
 
-    <section class="description" id="description2">
+    <section class="description hidden" id="description2">
       <p>
         "Looks like one shot won't cut it... Hurry up and plan the next attack!"
       </p>
       <p class="press-enter-txt">press on enter...</p>
     </section>
 
-    <section class="description" id="description3">
+    <section class="description hidden" id="description3">
       <p>"Just a little more...! They're almost down!"</p>
       <p class="press-enter-txt">press on enter...</p>
     </section>
 
     <!-- buttons for weapons -->
     <section id="weapons">
-      <button class="weapon-button" value="1">sword</button>
-      <button class="weapon-button" value="2">axe</button>
-      <button class="weapon-button" value="3">magic wand</button>
+      <button class="weapon-button hidden" value="1">sword</button>
+      <button class="weapon-button hidden" value="2">axe</button>
+      <button class="weapon-button hidden" value="3">magic wand</button>
     </section>
 
     <script src="fight.js" defer></script>

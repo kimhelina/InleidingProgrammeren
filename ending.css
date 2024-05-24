@@ -3,3 +3,7 @@ audio {
   top: 0;
   left: 0;
 }
+body {
+  background-image: url("img/end-background.png");
+  background-size: cover;
+}
