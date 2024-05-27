@@ -21,6 +21,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2em;
+  margin: 4em;
 
   background-image: url(img/bad/bad-background.png);
   background-size: cover;
