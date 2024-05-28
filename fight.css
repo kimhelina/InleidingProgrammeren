@@ -25,7 +25,7 @@ body {
 
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Align items horizontally in the center */
+  justify-content: center;
   align-items: center;
 
   gap: 2.5em;
@@ -44,12 +44,25 @@ h1 {
 #villian {
   width: 50vh;
   height: 50vh;
+  position: relative;
+  animation: moveLeftRight 2s ease-in-out infinite;
+}
+@keyframes moveLeftRight {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 0.8em;
+  }
+  100% {
+    left: 0;
+  }
 }
 
 .description {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Align items in the center horizontally */
+  align-items: center;
   padding: 2.25em 2em;
   gap: 1.25em;
   border-radius: 2.5em;

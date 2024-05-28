@@ -58,12 +58,8 @@ audio {
   left: 0;
 }
 
-/* 얘네 리스트 어떻게 고쳐야함 */
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
 }
 li {
   float: left;
@@ -77,14 +73,14 @@ li a {
 /* inside of the choices */
 .choices {
   display: flex;
-  padding: 2em 2.25em; /* 32px 36px */
-  width: 25.625em; /* 410px */
+  padding: 2em 2.25em;
+  width: 25.625em;
   height: 10em;
   flex-direction: column;
   align-items: center;
   gap: 1em;
 
-  border-radius: 1.875em; /* 30px */
+  border-radius: 1.875em;
   background: white;
 }
 /* two choices */
@@ -92,7 +88,7 @@ li a {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 2em; /* 40px */
+  gap: 2em;
 }
 
 /*character*/
@@ -118,14 +114,14 @@ li a {
 }
 .overlay-img {
   scale: 1.2;
-  z-index: 1; /* Ensure overlay appears above the ellipse */
+  z-index: 1;
 }
 
 /*textbox*/
 #textbox-container {
   margin-bottom: 1.25em;
-  display: flex; /* Use flexbox layout */
-  align-items: center; /* Align items vertically */
+  display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 1em;
 }

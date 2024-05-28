@@ -24,7 +24,7 @@ body {
   margin: 4em;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Align items horizontally in the center */
+  justify-content: center;
   align-items: center;
   background-image: url("img/end-background.png");
   background-size: cover;
