@@ -1,13 +1,3 @@
-localStorage.setItem("naam", "helina");
-console.log(localStorage.getItem("naam"));
-
-let bgm = new Audio("bgm/Intro.mp3");
-function playBgm() {
-  bgm.play();
-  console.log("play bgm");
-}
-playBgm();
-
 // Change character color
 function changeEllipseColor(color) {
   const ellipse = document.getElementById("ellipse");
