@@ -16,16 +16,20 @@
 }
 
 body {
-  margin: 4em;
-
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url(img/start-background.png);
   background-size: cover;
+}
 
+main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   gap: 2.5em;
 }
 

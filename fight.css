@@ -17,17 +17,19 @@
 
 body {
   height: 100vh;
-  margin: 4em;
-
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url(img/fight/fight-background.png);
-
   background-size: cover;
+}
 
+main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   gap: 2.5em;
 }
 
